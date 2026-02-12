@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="iconos/calavera-y-huesos.png">
+        <title>Gestor de Juegos</title>
+    </head>
+    <body>
+        <header>
+            <h1>Gestor de Juegos</h1>
+        </header>
+        <main>
+            <section id="filtrada">
+                <select name="" id="filtro-genero">
+                    <option value="">Todos los generos</option>
+                    <option value="RPG">RPG</option>
+                    <option value="ACCION">Accion</option>
+                    <option value="AVENTURA">Aventura</option>
+                    <option value="ESTRATEGIA">Estrategia</option>
+                    <option value="SHOOTER">Shooter</option>
+                    <option value="HORROR">Horror</option>
+                    <option value="SIMULACION">Simulacion</option>
+                    <option value="CARRERAS">Carreras</option>
+                </select>
+
+                <select name="" id="filtro-estado">
+                    <option value="">Todos los estados</option>
+                    <option value="PENDIENTE">Pendiente</option>
+                    <option value="JUGANDO">Jugando</option>
+                    <option value="TERMINADO">Terminado</option>
+                </select>
+
+                <button type="button" id="btn-aplicar-filtros" >Aplicar filtros</button>
+            </section>
+             
+            
+            <div id="orden">
+                <h3>Ordenar por:</h3>
+            <select name="" id="orden-tipo">
+                <option value="">Defecto</option>
+                <option value="nombre">Nombre</option>
+                <option value="genero">Genero</option>
+                <option value="estado">Estado</option>
+                <option value="mas-duracion">Mayor Duracion</option>
+                <option value="menor-duracion">Menor Duracion</option>
+            </select> 
+        </div>
+            
+            <div class="mens" id="mensaje-juegos"></div>
+            <div id="lista-juegos"></div>
+
+            <div id="paginacion">
+                <button id="anterior">Anterior</button>
+                <span id="info-pagina"></span>
+                <button id="siguiente">Siguiente</button>
+            </div>
+
+            <div  class="mens" id="mensaje-form"></div>
+            <h2>Cargar Juego</h2>
+            <form action="">
+                <div class="campo"  id="campo-nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Ej: Fire Emblem: Path of Radiance">
+                <small class="error-text"></small>
+                </div>
+                
+                <div id="filtros">
+
+                <div class="campo gen" id="campo-genero">
+                <label for="genero">Genero</label>
+                <select id="genero">
+                    <option value="">--Seleccionar--</option>
+                    <option value="RPG">RPG</option>
+                    <option value="ACCION">Accion</option>
+                    <option value="AVENTURA">Aventura</option>
+                    <option value="ESTRATEGIA">Estrategia</option>
+                    <option value="SHOOTER">Shooter</option>
+                    <option value="HORROR">Horror</option>
+                    <option value="SIMULACION">Simulacion</option>
+                    <option value="CARRERAS">Carreras</option>
+                    <option value="MMORPG">MMORPG</option>
+                    <option value="PLATAFORMAS">Plataformas</option>
+                    <option value="PUZZLE">Puzzle</option>
+                    <option value="LUCHA">Lucha</option>
+                    <option value="DEPORTES">Deportes</option>
+                    <option value="SURVIVAL">Survival</option>
+                    <option value="SANDBOX">Sandbox</option>
+                    <option value="CARTAS">Cartas</option>
+                </select>
+                <small class="error-text"></small>
+            </div>
+
+                <div class="campo est" id="campo-estado">
+                <label for="estado">Estado</label>
+                <select id="estado">
+                    <option value="">--Seleccionar--</option>
+                    <option value="PENDIENTE">Pendiente</option>
+                    <option value="JUGANDO">Jugando</option>
+                    <option value="TERMINADO">Terminado</option>
+                    <option value="PAUSADO">Pausado</option>
+                </select>
+                <small class="error-text"></small>
+                </div>
+            </div>
+
+                <div class="campo" id="campo-duracion">
+                <label for="duracion">Duracion</label>
+                <input type="number" id="duracion" placeholder="Duracion del titulo">
+                <small class="error-text"></small>
+            </div>
+                
+
+                <button id="crear">Crear Juego</button>
+                <button id="cancelar" type="button" style="display: none;"> Cancelar</button>
+            
+            </form>
+
+        </main>
+        <script src="script.js"></script>
+    </body>
+    <footer>
+        <div>@ 2026 - Projecto en desarrollo</div></footer>
+</html>
